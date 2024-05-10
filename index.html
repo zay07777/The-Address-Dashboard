@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Address Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: black;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .box-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    }
+
+    .box {
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin: 10px; /* Adjust margin for spacing between boxes */
+      border-radius: 5px;
+      width: 200px; /* Adjust width as needed */
+      text-align: center;
+    }
+
+    .box a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold; /* Set font weight to bold */
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd; /* Change highlighting color to grey */
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="C:\Users\User\Desktop\The Address logo 1.png" alt="The Address Logo" class="logo">
+    <h1>Welcome to The Address</h1>
+    <p id="time" class="time"></p>
+    <div class="box-container">
+      <div class="box">
+        <a href="https://docs.google.com/spreadsheets/d/1XJWkkM3EEEeeK0mPa0w6mxx17ctW18jwDtcDwdhaxq4/edit#gid=0" target="_blank">
+          <p>Employee Attendance</p>
+        </a>
+      </div>
+      <div class="box">
+        <div class="dropdown">
+          <a class="dropbtn">Inventory</a>
+          <div class="dropdown-content">
+            <a href="https://docs.google.com/spreadsheets/d/1b_szqigbfl52wV0RRpRjIZWIFwI65DaH_LleR6t0_-Q/edit#gid=0" target="_blank">Room Refills</a>
+            <a href="https://docs.google.com/spreadsheets/d/1rk3-zCrhGwwpOfjfOd1b9mTavjWGRcbjhP5sjhtXsHw/edit#gid=1971263793" target="_blank">Cleaners Refill</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <a href="https://calendar.google.com/calendar/u/0?cid=YTU3NTM0ZWEzMmE3MTgyN2JiMjI4ZGVkNjdlNmY4ODRjNDU2Yzc2ZDVkMGM0M2ZkMGY0OTUzMjg2OTdiZDczOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">
+          <p>Calendar</p>
+        </a>
+      </div>
+      <div class="box">
+        <a href="https://docs.google.com/spreadsheets/d/1olX9vVDo5bTFUNB7K4PuYDW3XjWBKdy0TpcXiVi2WF4/edit#gid=0" target="_blank">
+          <p>Repair and Maintenance Records</p>
+        </a>
+      </div>
+    </div>
+    <!-- Embedded Google Calendar -->
+    <div class="google-calendar">
+      <iframe src="https://calendar.google.com/calendar/embed?src=a57534ea32a71827bb228ded67e6f884c456c76d5d0c43fd0f495328697bd738%40group.calendar.google.com&ctz=Africa%2FNairobi" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+</form>
+<div id="errorMessage" style="display: none; color: red;">Invalid username or password</div>
+
